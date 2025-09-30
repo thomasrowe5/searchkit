@@ -13,3 +13,11 @@ serde_json = "1"
 clap = { version = "4", features = ["derive"] }
 axum = "0.7"
 tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+[[bin]]
+name = "query-inv-rank"
+path = "src/bin/query_inv_rank.rs"
+
+[[bin]]
+name = "substr-context"
+path = "src/bin/substr_context.rs"
+
