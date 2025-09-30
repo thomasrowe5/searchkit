@@ -1,0 +1,2 @@
+pub fn tokenize(s:&str)->Vec<(String,usize)>{ let mut out=Vec::new(); let mut cur=String::new(); for (i,ch) in s.char_indices(){ if ch.is_alphanumeric(){cur.push(ch.to_ascii_lowercase());} else { if !cur.is_empty(){ out.push((std::mem::take(&mut cur),i)); }}} if !cur.is_empty(){ out.push((cur,s.len())); } out }
+#[cfg(test)] mod tests{ use super::*; #[test] fn toks(){ let v=tokenize("Hello, world! Hello?"); let terms:Vec<_>=v.iter().map(|(t,_)| t.as_str()).collect(); assert_eq!(terms,vec!["hello","world","hello"]); } }
