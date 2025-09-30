@@ -1,0 +1,14 @@
+# Rust build artifacts
+/target
+**/*.rs.bk
+
+# Logs and lock files
+*.log
+Cargo.lock
+
+# OS / Editor files
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
